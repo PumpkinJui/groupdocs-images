@@ -13,6 +13,7 @@ for file in "${files[@]}"; do
 
     # 使用 FFmpeg 进行压缩；qscale=15；crf=23
     ffmpeg -i "$file" -qscale 15 -preset medium "$output_file"
+    #ffmpeg -i "$file" -c:v libx265 -crf 23 -preset medium "$output_file"
 done
 
 echo "压缩完成。"
